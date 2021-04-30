@@ -8,7 +8,6 @@ import cv2
 
 # constructing and parsing arguments
 ap = argparse.ArgumentParser()
-# ap.add_argument("-i", "--image", required=True, help="path to input image")
 ap.add_argument("-p", "--prototext", required=True, help="path to Caffe 'deploy' prototext file")
 ap.add_argument("-m", "--model", required=True, help="path to Caffe pre-trained model")
 ap.add_argument("-c", "--confidence", type=float, default=0.5, help="minimum probability to filter weak detections")
@@ -34,7 +33,7 @@ while True:
     blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
 
     # passing the blob through the network and obtaining the detections and predictions
-    # print("[INFO] computing object detections...")
+    print("[INFO] computing object detections...")
     net.setInput(blob)
     detections = net.forward()
 
