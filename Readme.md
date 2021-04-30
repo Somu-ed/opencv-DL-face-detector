@@ -10,6 +10,7 @@ fast, accurate face detection with OpenCV using a pre-trained deep learning face
 5. time
 
 **additional files needed**
+
 Both files can be found in the opencv Github repo.
 1. deploy.prototxt (defines the model architecture/actual layers)
 2. caffemodel file (contains the weights for the actual layers)
