@@ -22,7 +22,7 @@ image = cv2.imread(args["image"])
 blob = cv2.dnn.blobFromImage(cv2.resize(image, (300, 300)), 1.0, (300, 300), (104.0, 177.0, 123.0))
 
 # passing the blob through the network and obtaining the detections and predictions
-print("[INFO] computing object detections")
+print("[INFO] computing object detections...")
 net.setInput(blob)
 detections = net.forward()
 
